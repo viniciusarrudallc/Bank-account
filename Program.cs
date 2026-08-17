@@ -27,15 +27,7 @@ namespace Bank;
             account = new Account(accountId, accountHolder);
         }
 
-        Console.WriteLine("Deposit: ");
-        Transactions.Deposit(account);
-
-        Console.WriteLine(account);
-
-        Transactions.Withdraw(account);
-
-        Console.WriteLine(account);
-
+        
     }
 
 
