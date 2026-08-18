@@ -3,41 +3,12 @@ namespace Bank;
 
     class Program
 {
-   public static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Account account;
-        
-        Console.WriteLine("# ACCOUNT ID: ");
-        int accountId = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("# ACCOUNT HOLDER");
-        string accountHolder = Console.ReadLine();
-        
-        Console.WriteLine("You need to do a security deposit? S/N ");
-        char option = char.Parse(Console.ReadLine());
-       
-        if(option == 's' ||  option == 'S'){
-            Console.WriteLine("How many you want to deposit? ");
-            double initialValue = double.Parse(Console.ReadLine());
-
-           account = new Account(accountId, accountHolder, initialValue);
-        }
-        else
-        {
-            account = new Account(accountId, accountHolder);
-        }
-
-        Console.WriteLine("Deposit: ");
-        double value = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-        account.Deposit(value);
-
-        Console.WriteLine("WithDraw: ");
-        double valueWithdraw = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-        account.WithDraw(valueWithdraw);
-
-        Console.WriteLine(account);
+        Account account = new Account();
+        AccountMenu.Menu();
+        AccountMenu.RequestDeposit(account);
+        AccountMenu.RequestWithdraw(account);
 
     }
-
-
 }

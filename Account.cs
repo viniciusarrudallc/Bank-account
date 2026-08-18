@@ -6,6 +6,9 @@
         public string AccountHolder { get; set; }
         public double Balance {  get; private set; }
 
+        
+        public Account() { }
+        
         public Account(int AccountId, string AccountHolder, double initialDeposit)
         {
           
