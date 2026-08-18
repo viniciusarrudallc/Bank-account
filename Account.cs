@@ -8,15 +8,8 @@
 
         public Account(int AccountId, string AccountHolder, double initialDeposit)
         {
-            if(AccountId <= 0)
-            {
-                Console.WriteLine("");
-
-            }
-            
-            
-            
-            
+          
+    
             this.AccountId = AccountId;
             this.AccountHolder = AccountHolder;
             Balance = initialDeposit;

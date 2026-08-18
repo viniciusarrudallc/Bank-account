@@ -27,7 +27,16 @@ namespace Bank;
             account = new Account(accountId, accountHolder);
         }
 
-        
+        Console.WriteLine("Deposit: ");
+        double value = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        account.Deposit(value);
+
+        Console.WriteLine("WithDraw: ");
+        double valueWithdraw = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        account.WithDraw(valueWithdraw);
+
+        Console.WriteLine(account);
+
     }
 
 
