@@ -7,10 +7,12 @@ namespace Bank;
         
         public static void Menu()
     {
-        Account account;
 
         Console.WriteLine("# ACCOUNT ID: ");
         int accountId = int.Parse(Console.ReadLine());
+
+        Account account = new Account();
+        account.AccountId = accountId;
 
         Console.WriteLine("# ACCOUNT HOLDER");
         string accountHolder = Console.ReadLine();

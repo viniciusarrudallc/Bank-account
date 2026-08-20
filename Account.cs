@@ -11,7 +11,7 @@
         {
             get { return _accountId; }
 
-            set { if (value < 3 && value.ToString().Length < 0) {
+            set { if (value.ToString().Length < 3) {
 
                     Console.WriteLine("ID NEED TO HAVE MORE THAN 3 CHARACTERS");
 
@@ -19,7 +19,7 @@
                 }
                 else
                 {
-                     value = _accountId;
+                    _accountId = value;
                 }
             
             }
@@ -28,11 +28,11 @@
         }
         public Account() { }
         
-        public Account(int AccountId, string AccountHolder, double initialDeposit)
+        public Account(int accountId, string AccountHolder, double initialDeposit)
         {
           
     
-            this.AccountId = AccountId;
+            AccountId = accountId;
             this.AccountHolder = AccountHolder;
             Balance = initialDeposit;
 
