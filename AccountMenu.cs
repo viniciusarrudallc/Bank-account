@@ -1,11 +1,9 @@
-﻿using System.Security.Principal;
-
-namespace Bank;
+﻿namespace Bank;
 
     internal class AccountMenu
     {
         
-        public static void Menu()
+        public static Account Menu()
     {
 
         Console.WriteLine("# ACCOUNT ID: ");
@@ -32,7 +30,7 @@ namespace Bank;
             account = new Account(accountId, accountHolder);
         }
 
-        Console.WriteLine(account);
+        return account;
     }
         
     public static void RequestDeposit(Account account)
@@ -49,7 +47,6 @@ namespace Bank;
         double valueWithdraw = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
         account.WithDraw(valueWithdraw);
 
-        Console.WriteLine(account);
 
     }
 }
